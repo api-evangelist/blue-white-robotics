@@ -1,17 +1,40 @@
 aid: blue-white-robotics
 name: Blue White Robotics
-description: 'Blue White Robotics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Blue White Robotics Ltd. — operating as Bluewhite — is an Israeli off-road
+  autonomy company founded in 2017 by Ben Alfi, Yair Shahar and Aviram Shmueli, headquartered
+  in Tel Aviv with a US operation in Fresno, California. Bluewhite builds an OEM-agnostic
+  autonomy stack that retrofits conventional vehicles into unmanned ground vehicles:
+  Pathfinder, an aftermarket autonomy kit combining control, intelligence and perception
+  modules over a distributed CAN network, and Compass, a cloud fleet-operations SaaS
+  that lets operators remotely supervise, task and monitor an autonomous fleet. The
+  company began in permanent-crop agriculture — autonomous spraying, mowing and harvest
+  support across roughly 150,000 US acres for 20-plus growers — and has since extended
+  the same GPS-denied navigation and perception stack to defense and homeland-security
+  ground robotics. Elbit Systems'' FUSE acquired 100% of Blue White Robotics in 2026.
+  Bluewhite markets a Software SDK and an "API platform" for OEM and system integration,
+  but publishes no public developer portal, API reference, or machine-readable specification;
+  the Compass operator platform sits behind a Keycloak/OIDC login and integration access
+  runs through a contact-sales form.'
+image: https://cdn.prod.website-files.com/63bbd401d9936c49d2edf55f/686fed1ea1aabd319517cf1b_BLUEWHITE-LOGO-HORIZONTAL-FULL_COLOR.png
 url: https://raw.githubusercontent.com/api-evangelist/blue-white-robotics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: enriched
 specificationVersion: '0.20'
 created: '2026-08-07'
 modified: '2026-08-07'
 tags:
 - Company
+- Robotics
+- Autonomous Vehicles
+- Agriculture
+- Agricultural Technology
+- Artificial Intelligence
+- Fleet Management
+- Defense
+- Unmanned Ground Vehicles
+- Israel
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +43,54 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bluewhite.ai/
+- type: About
+  url: https://www.bluewhite.ai/about
+- type: Technology
+  url: https://www.bluewhite.ai/technology
+- type: Blog
+  url: https://www.bluewhite.ai/blog
+- type: Press
+  url: https://www.bluewhite.ai/press
+- type: Support
+  url: https://www.bluewhite.ai/contact
+- type: Login
+  url: https://compass.bluewhite.ai/
+- type: TermsOfService
+  url: https://www.bluewhite.ai/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.bluewhite.ai/privacy-policy
+- type: CookiePolicy
+  url: https://www.bluewhite.ai/cookie-policy
+- type: Careers
+  url: https://www.bluewhite.ai/careers
+- type: WellKnown
+  url: well-known/blue-white-robotics-well-known.yml
+- type: DomainSecurity
+  url: security/blue-white-robotics-domain-security.yml
+- type: LLMsTxt
+  url: llms/blue-white-robotics-llms.txt
+x-enrichment:
+  date: '2026-08-07'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Bluewhite advertises a "Software SDK" and an "API platform" on its technology page but
+    publishes no reference behind them — the only route is the contact form, and the Compass
+    operator platform 302s every path, including /openapi.json, to a Keycloak OIDC login.
+  evidence:
+  - url: https://www.bluewhite.ai/technology
+    status: 200
+  - url: https://compass.bluewhite.ai/openapi.json
+    status: 302
+  - url: https://auth.bluewhite.ai/realms/maia-cloud/.well-known/openid-configuration
+    status: 503
+  - url: https://www.bluewhite.ai/.well-known/agent-card.json
+    status: 404
+  - url: https://www.bluewhite.ai/llms.txt
+    status: 404
+  checked: '2026-08-07'
