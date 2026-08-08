@@ -42,5 +42,23 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Blue White Robotics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Blue White Robotics Ltd. — operating as **Bluewhite** — is an Israeli off-road autonomy company
+founded in 2017 by Ben Alfi, Yair Shahar and Aviram Shmueli, headquartered in Tel Aviv with a US
+operation in Fresno, California. Bluewhite builds an OEM-agnostic autonomy stack that retrofits
+conventional vehicles into unmanned ground vehicles: **Pathfinder**, an aftermarket autonomy kit
+combining control, intelligence and perception modules over a distributed CAN network, and
+**Compass**, a cloud fleet-operations SaaS for remotely supervising, tasking and monitoring an
+autonomous fleet. The company began in permanent-crop agriculture — roughly 150,000 US acres for
+20-plus growers — and has since extended the same GPS-denied navigation and perception stack to
+defense and homeland-security ground robotics. Elbit Systems' FUSE acquired 100% of Blue White
+Robotics in 2026.
+
+**API surface (checked 2026-08-07):** Bluewhite markets a "Software SDK" and an "API platform" on
+its technology page, but publishes no developer portal, no API reference, and no machine-readable
+specification. The Compass operator platform 302s every path — including `/openapi.json` — to a
+Keycloak OIDC login (`realm maia-cloud`, `client maia-prod`), and SDK/API access runs through the
+contact-sales form. See `x-coverage` in `apis.yml`.
+
+- https://www.bluewhite.ai/
+- https://www.bluewhite.ai/technology
+- https://compass.bluewhite.ai/ (customer login)

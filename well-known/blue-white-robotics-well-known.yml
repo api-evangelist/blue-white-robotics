@@ -1,0 +1,76 @@
+generated: '2026-08-07'
+method: probed
+source: live HTTP probes of every Bluewhite host reachable without credentials
+summary: >-
+  No /.well-known/ document is published on any Bluewhite host. www.bluewhite.ai is a
+  Webflow-hosted marketing site whose /.well-known/* catch-all answers HTTP 404 with an
+  "Invalid .well-known request" HTML body — a clean negative, not a soft-404. The only
+  identity surface found is a Keycloak realm behind compass.bluewhite.ai, and it refused
+  anonymous discovery.
+hosts:
+- host: https://www.bluewhite.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 404
+    content_type: text/html
+- host: https://compass.bluewhite.ai
+  note: >-
+    Every path returns HTTP 302 from an AWS ALB to
+    https://auth.bluewhite.ai/realms/maia-cloud/protocol/openid-connect/auth with
+    client_id=maia-prod, response_type=code and scope="email openid" — an OIDC
+    authorization-code gate on the whole application, including /.well-known/*.
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 302
+  - path: /openapi.json
+    status: 302
+  - path: /swagger.json
+    status: 302
+  - path: /api
+    status: 302
+  - path: /api/v1
+    status: 302
+- host: https://auth.bluewhite.ai
+  note: >-
+    Keycloak identity provider for the maia-cloud realm. Returned HTTP 503 (awselb/2.0)
+    to every anonymous request, so the realm's OIDC discovery document could not be read.
+  documents:
+  - path: /realms/maia-cloud/.well-known/openid-configuration
+    status: 503
+  - path: /realms/maia-cloud/.well-known/oauth-authorization-server
+    status: 503
+  - path: /realms/maia-cloud
+    status: 503
+  - path: /
+    status: 503
+observed_auth:
+  scheme: OpenID Connect (Keycloak)
+  issuer_host: auth.bluewhite.ai
+  realm: maia-cloud
+  client_id: maia-prod
+  grant: authorization_code
+  scopes_requested:
+  - email
+  - openid
+  evidence: >-
+    Location header of the HTTP 302 returned by https://compass.bluewhite.ai/ on
+    2026-08-07. This gates the customer operator platform; it is not a documented
+    public API authentication surface, so no authentication/ artifact was written.
