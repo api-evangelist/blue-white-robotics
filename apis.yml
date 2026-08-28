@@ -15,6 +15,17 @@ description: 'Blue White Robotics Ltd. — operating as Bluewhite — is an Isra
   but publishes no public developer portal, API reference, or machine-readable specification;
   the Compass operator platform sits behind a Keycloak/OIDC login and integration access
   runs through a contact-sales form.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/63bbd401d9936c49d2edf55f/686fed1ea1aabd319517cf1b_BLUEWHITE-LOGO-HORIZONTAL-FULL_COLOR.png
 url: https://raw.githubusercontent.com/api-evangelist/blue-white-robotics/refs/heads/main/apis.yml
 x-type: company
