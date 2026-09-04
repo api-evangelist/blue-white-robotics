@@ -26,6 +26,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/63bbd401d9936c49d2edf55f/686fed1ea1aabd319517cf1b_BLUEWHITE-LOGO-HORIZONTAL-FULL_COLOR.png
 url: https://raw.githubusercontent.com/api-evangelist/blue-white-robotics/refs/heads/main/apis.yml
 x-type: company
