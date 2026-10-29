@@ -64,23 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Blue White Robotics Ltd. — operating as **Bluewhite** — is an Israeli off-road autonomy company
-founded in 2017 by Ben Alfi, Yair Shahar and Aviram Shmueli, headquartered in Tel Aviv with a US
-operation in Fresno, California. Bluewhite builds an OEM-agnostic autonomy stack that retrofits
-conventional vehicles into unmanned ground vehicles: **Pathfinder**, an aftermarket autonomy kit
-combining control, intelligence and perception modules over a distributed CAN network, and
-**Compass**, a cloud fleet-operations SaaS for remotely supervising, tasking and monitoring an
-autonomous fleet. The company began in permanent-crop agriculture — roughly 150,000 US acres for
-20-plus growers — and has since extended the same GPS-denied navigation and perception stack to
-defense and homeland-security ground robotics. Elbit Systems' FUSE acquired 100% of Blue White
-Robotics in 2026.
+Blue White Robotics Ltd. — operating as Bluewhite — is an Israeli off-road autonomy company founded in 2017 by Ben Alfi, Yair Shahar and Aviram Shmueli, headquartered in Tel Aviv with a US operation in Fresno, California. Bluewhite builds an OEM-agnostic autonomy stack that retrofits conventional vehicles into unmanned ground vehicles: Pathfinder, an aftermarket autonomy kit combining control, intelligence and perception modules over a distributed CAN network, and Compass, a cloud fleet-operations SaaS that lets operators remotely supervise, task and monitor an autonomous fleet. The company began in permanent-crop agriculture — autonomous spraying, mowing and harvest support across roughly 150,000 US acres for 20-plus growers — and has since extended the same GPS-denied navigation and perception stack to defense and homeland-security ground robotics. Elbit Systems' FUSE acquired 100% of Blue White Robotics in 2026. Bluewhite markets a Software SDK and an "API platform" for OEM and system integration, but publishes no public developer portal, API reference, or machine-readable specification; the Compass operator platform sits behind a Keycloak/OIDC login and integration access runs through a contact-sales form.
 
-**API surface (checked 2026-08-07):** Bluewhite markets a "Software SDK" and an "API platform" on
-its technology page, but publishes no developer portal, no API reference, and no machine-readable
-specification. The Compass operator platform 302s every path — including `/openapi.json` — to a
-Keycloak OIDC login (`realm maia-cloud`, `client maia-prod`), and SDK/API access runs through the
-contact-sales form. See `x-coverage` in `apis.yml`.
+**Areas:** Company · Robotics · Autonomous Vehicles · Agriculture · AgTech · Artificial Intelligence · Fleet Management · Defense · Unmanned Ground Vehicles · Israel
 
-- https://www.bluewhite.ai/
-- https://www.bluewhite.ai/technology
-- https://compass.bluewhite.ai/ (customer login)
+## Blue White Robotics on APIs.io
+
+Everything profiled for Blue White Robotics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blue-white-robotics/](https://apis.io/providers/blue-white-robotics/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Blue White Robotics Domain Security](https://apis.io/security/blue-white-robotics/blue-white-robotics-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.bluewhite.ai/)
+- [Support](https://www.bluewhite.ai/contact)
+- [Blog](https://www.bluewhite.ai/blog)
+- [Terms of service](https://www.bluewhite.ai/terms-of-use)
+- [Privacy policy](https://www.bluewhite.ai/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 12.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 12.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blue-white-robotics/](https://apis.io/providers/blue-white-robotics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Blue White Robotics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blue-white-robotics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
